@@ -1,25 +1,27 @@
---- LOGG ---
-------------
+----------------------------
+----------- LOGG -----------
+----------------------------
 
-- Importera data filerna sebank_customer.csv och transactions.csv
-- Validerar ovanstående filer med hjälp av mydata.df.py
 
-1. Förberedelser och uppstart
-	1. Klona projektet, bank-project, och lägg upp det i VSCode.		KLAR
+- Importera data filerna sebank_customer.csv och transactions.csv					KLAR
+- Validerar ovanstående filer med hjälp av mydata.df.py							KLAR
+
+KLAR - 1. Förberedelser och uppstart
+	1. Klona projektet, bank-project, och lägg upp det i VSCode.					KLAR
 	2. Installera en virtuell miljö (venv)								KLAR
 	3. Skapa projektstruktur (mapp-struktur)							KLAR
-	4. Installera PostgreSQL eller använd DOCKER						??????
+	4. Installera PostgreSQL eller använd DOCKER							??????
 
-2. Databasmodellering och migrationer
-	1. Skapa modeller i SQLAlchemy										KLAR
+KLAR - 2. Databasmodellering och migrationer
+	1. Skapa modeller i SQLAlchemy									KLAR
 	2. Lägg till Alembic och skapa migrations							KLAR
-	3. Skapa första migration											KLAR
+	3. Skapa första migration									KLAR
 		alembic revision --autogenerate -m "Initial models"
 		alembic upgrade head
-	4. Sätt upp alembic.ini och env.py för din databas					KLAR
+	4. Sätt upp alembic.ini och env.py för din databas						KLAR
 
 3. Dataanalys och validering i Notebook
-	- Validera data i models.py och få bättre models					KLAR
+	- Validera data i models.py och få bättre models						KLAR
 	1. Skapa en Notebook notebooks/validation.ipynb
 	2. Ladda in filerna med pandas.read_csv()
 	3. Kontrollera:
