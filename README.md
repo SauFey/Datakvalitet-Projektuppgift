@@ -15,14 +15,12 @@ Verktyg för projektet:
 
 ###########################################
 
-! OBS OBS OBS OBS OBS OBS OBS OBS OBS OBS !
 
 
-Detta projekt är ej färdigt ännnu. Inlämning sker ändå för att få komplettera så att jag hinner slutföra min uppgift, då jag haft lite dåligt med tid på sistone.
+DETTA PROJEKT ÄR EJ FÄRDIGT ÄNNU. Inlämning sker ändå för att få komplettera så att jag hinner slutföra min uppgift, då jag haft lite dåligt med tid på sistone.
 
-För att följa processen - se loggboken under Project-Bank.
+För att följa processen - se loggboken under mappen Projektarbete.
 
 
-! OBS OBS OBS OBS OBS OBS OBS OBS OBS OBS !
 
 ###########################################
