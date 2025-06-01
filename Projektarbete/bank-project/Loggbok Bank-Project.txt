@@ -1,0 +1,83 @@
+--- LOGG ---
+------------
+
+- Importera data filerna sebank_customer.csv och transactions.csv
+- Validerar ovanstående filer med hjälp av mydata.df.py
+
+1. Förberedelser och uppstart
+	1. Klona projektet, bank-project, och lägg upp det i VSCode.		KLAR
+	2. Installera en virtuell miljö (venv)								KLAR
+	3. Skapa projektstruktur (mapp-struktur)							KLAR
+	4. Installera PostgreSQL eller använd DOCKER						??????
+
+2. Databasmodellering och migrationer
+	1. Skapa modeller i SQLAlchemy										KLAR
+	2. Lägg till Alembic och skapa migrations							KLAR
+	3. Skapa första migration											KLAR
+		alembic revision --autogenerate -m "Initial models"
+		alembic upgrade head
+	4. Sätt upp alembic.ini och env.py för din databas					KLAR
+
+3. Dataanalys och validering i Notebook
+	- Validera data i models.py och få bättre models					KLAR
+	1. Skapa en Notebook notebooks/validation.ipynb
+	2. Ladda in filerna med pandas.read_csv()
+	3. Kontrollera:
+		Saknade värden
+		Felaktiga datumformat
+		Felaktiga IBAN
+		Transaktioner med negativa belopp
+		Misstänkt transaktionsmönster (ex. stora belopp till okända länder)
+	4. Skapa funktioner för validering i src/etl/validate.py
+		Returnera tex en tuple: (valida, ogiltiga, felorsaker)
+		
+4. Import till databas med transaktioner och rollback
+	1. Använd SQLAlchemy-session för att göra inserts
+	2. Slå in databasuppdateringar i transaktioner:
+	
+		from sqlalchemy.exc import SQLAlchemyError
+
+		try:
+			with Session() as session:
+				for row in validated_data:
+					session.add(Transaction(**row))
+				session.commit()
+		except SQLAlchemyError as e:
+			session.rollback()
+			print("Fel vid import:", e)
+
+
+5. Testning
+	1. Importera pytest: pip install pytest
+	2. Skapa tester i src/tests/test_validate.py
+	3. Kör testerna: pytest
+	
+6. Workflow automation (prefect)
+	1. Installera Prefect: pip install prefect
+	2. Skapa src/workflows/bank_flow.py
+		from prefect import flow, task
+		
+		@task
+		def load_data(): ...
+		@task
+		def validate_data(): ...
+		@task
+		def import_to_db(): ...
+		
+		@flow
+		def bank_workflow():
+			data = load_data()
+			valid_data = validate_data(data)
+			import_to_db(valid_data)
+		
+		if __name__ == "__main__":
+			bank_workflow()
+	3. Kör hela flödet lokalt: python src/workflows/bank_flow.py
+	
+7. Rapport och dokumentation
+	1. Notebook med analys och valideringslogg
+	2. GitHub-repo med:
+		README.md med instruktioner
+		Källkod (modeller, validering, workflows)
+		Testkod
+		Eventuell GROUP.md om det är fler medlemmar i projektet
