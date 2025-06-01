@@ -13,6 +13,7 @@ Verktyg för projektet:
 - Trello ?
 
 ###########################################
+
 ! OBS OBS OBS OBS OBS OBS OBS OBS OBS OBS !
 
 Detta projekt är ej färdigt ännnu. Inlämning sker ändå för att få komplettera så att jag hinner slutföra min uppgift, då jag haft lite dåligt med tid på sistone.
@@ -20,4 +21,5 @@ Detta projekt är ej färdigt ännnu. Inlämning sker ändå för att få komple
 För att följa processen - se loggboken under Project-Bank.
 
 ! OBS OBS OBS OBS OBS OBS OBS OBS OBS OBS !
+
 ###########################################
