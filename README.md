@@ -9,7 +9,7 @@ Verktyg för projektet:
 - Jupyter Notebook > Dataanalys och rapporter
 - Pytest > För testning
 - Prefect > Workflow-automatisering
-- GitHub > Versionshantering
+- Git > Versionshantering
 - Trello ?
 
 
