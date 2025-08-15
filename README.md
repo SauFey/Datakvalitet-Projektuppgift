@@ -10,7 +10,7 @@ Verktyg för projektet:
 - Pytest > För testning
 - Prefect > Workflow-automatisering
 - Git > Versionshantering
-- Trello ?
+- Trello > För SCRUM-board > EJ RELEVANT
 
 
 ###########################################
