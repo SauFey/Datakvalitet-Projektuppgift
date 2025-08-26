@@ -1,17 +1,31 @@
 from sqlalchemy import Column, Integer, String, Float, DateTime, ForeignKey
 from sqlalchemy.orm import relationship, declarative_base
+from bank.database import Base
 
 Base = declarative_base()
+
+class Bank(Base):
+    __tablename__ = "banks"
+    id = Column(Integer, primary_key=True, index=True)
+    name = Column(String, nullable=False)
+    customers = relationship("Customer", back_populates="bank")
+    accounts = relationship("Account", back_populates="bank")
 
 class Customer(Base):
     __tablename__ = 'customers'
     id = Column(Integer, primary_key=True, autoincrement=True)
-    name = Column(String)
+    customer_id = Column(Integer, ForeignKey("customers.id"))
+    name = Column(String, nullable=False)
     adress = Column(String)
     phone = Column(String)
     personnummer = Column(String)
     bank_account = Column(String, unique=True)
     
+class Account(Base):
+    __tablename__ = 'accounts'
+    id = Column(Integer, primary_key=True)
+    customer_id = Column(Integer, ForeignKey('customer_id'))
+    balance = Column(Float)
 
 class Transaction(Base):
     __tablename__ = 'transactions'
