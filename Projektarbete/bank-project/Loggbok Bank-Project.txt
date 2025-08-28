@@ -23,16 +23,16 @@
 	- Validera data i models.py och få bättre models					KLAR
 	1. Skapa en Notebook notebooks/validation.ipynb						KLAR
 	2. Ladda in filerna med pandas.read_csv()							KLAR
-	3. Kontrollera:
-		Saknade värden
-		Felaktiga datumformat
-		Felaktiga IBAN
-		Transaktioner med negativa belopp
-		Misstänkt transaktionsmönster (ex. stora belopp till okända länder)
-	4. Skapa funktioner för validering i src/etl/validate.py
-		Returnera tex en tuple: (valida, ogiltiga, felorsaker)
+	3. Kontrollera:														KLAR
+		Saknade värden													KLAR
+		Felaktiga datumformat											KLAR
+		Felaktiga IBAN													KLAR
+		Transaktioner med negativa belopp								KLAR
+		Misstänkt transaktionsmönster (ex. stora belopp till okända länder)		KLAR
+	4. Skapa funktioner för validering i src/etl/validate.py			KLAR
+		Returnera tex en tuple: (valida, ogiltiga, felorsaker)			KLAR
 		
-4. Import till databas med transaktioner och rollback
+4. Import till databas med transaktioner och rollback					KLAR
 	1. Använd SQLAlchemy-session för att göra inserts
 	2. Slå in databasuppdateringar i transaktioner:
 	
@@ -90,3 +90,9 @@ Att bygga ett workflow-baserat system som:
 - Loggar alla steg och tillämpar rollback vid felorsaker
 - Utför tester och kvalitetssäkring på automatiserat Sätt
 (- Är byggd som ett team-projekt med versionshantering och samarbete)
+
+
+Självutvärdering:
+
+Jag känner att jag ofta hamnar i samma fel varje gång. Att jag tex alltid har problem med att ligga i rätt sökväg för när jag ska köra kommandon.
+Detta gör i sin tur att jag ofta får felkoder och när jag väl byter filksökväg så kan felet fortfarande stå kvar. Oftast i form av "There is no file named db.js" eller liknande.

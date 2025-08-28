@@ -1,4 +1,4 @@
-from bank.database import SessionLocal, engine
+from database import SessionLocal, engine
 from bank import models
 
 # Skapa tabeller om man kör direkt (utan Alembic)

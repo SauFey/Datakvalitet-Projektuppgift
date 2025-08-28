@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer, String, Float, DateTime, ForeignKey
 from sqlalchemy.orm import relationship, declarative_base
-from bank.database import Base
+from database import Base
 
 Base = declarative_base()
 

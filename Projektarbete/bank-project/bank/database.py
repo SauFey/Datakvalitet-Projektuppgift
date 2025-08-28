@@ -1,18 +1,10 @@
 from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker, declarative_base
+from sqlalchemy.orm import declarative_base, sessionmaker
 
-DATABASE_URL = "sqlite:///./bank.db"
+DATABASE_URL = "sqlite:///C:/Users/stenm/Desktop/Data Manager/Datakvalitet/Projektarbete/bank-project/db/database.db"
+# DATABASE_URL = "sqlite:///database.db"
 
-# Skapa en engine
-engine = create_engine(
-    DATABASE_URL,
-    connect_args={"check_same_thread": False}) # Krävs för SQLite
+engine = create_engine("sqlite:///C:/Users/stenm/Desktop/Data Manager/Datakvalitet/Projektarbete/bank-project/db/database.db", connect_args={"check_same_thread": False})
+SessionLocal = sessionmaker(bind=engine)
 
-# Skapa en session factory
-SessionLocal = sessionmaker(autocommit=False, autoFlush=False, bind=engine)
-
-# # Skapa tabeller (om du kör direkt utan Alembic, men Alembic använder inte detta)
-# def init_db():
-#     Base.metadata.create_all(bind=engine)
-    
 Base = declarative_base()
