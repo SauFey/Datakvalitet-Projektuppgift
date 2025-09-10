@@ -20,20 +20,6 @@ Verktyg för projektet:
 - Pytest > För testning
 - Prefect > Workflow-automatisering
 - Git > Versionshantering
-- Trello > För SCRUM-board > EJ RELEVANT
 
 
 Projektet är versionerat i GitHub och följer en tydlig mappstruktur för enkel vidareutveckling.
-
-
-###########################################
-
-
-
-DETTA PROJEKT ÄR EJ FÄRDIGT ÄNNU. Inlämning sker ändå för att få komplettera så att jag hinner slutföra min uppgift, då jag haft lite dåligt med tid på sistone.
-
-För att följa processen - se loggboken under mappen Projektarbete.
-
-
-
-###########################################
