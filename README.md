@@ -1,25 +1,7 @@
-# Bank Project - ETL och Analys
+# Bank Project - ETL och Analys - Automatiserat datakvalitetsflöde
+### Individuellt arbete av SauFey
 
-Detta projekt innehåller ett ETL-flöde för att automatisera data-flöden:
-- **Extract**: CSV-filer med kunder och transaktioner.
-- **Transform**: Validering av data (IBAN, datum, belopp).
-- **Load**: Rensad data laddas till SQLite-databas (`bank.db`).
-
-## Struktur
-- `etl_pipeline.py` - Skript för att köra ETL-flödet.
-- `validation.ipynb` - Notebook med analys och grafer.
-- `data/raw/` - Originalfiler.
-- `data/clean/` - Rensade filer.
-- `data/bad/` - Trasiga poster.
-
-## Krav
-Installera beroenden:
-
-# Projektuppgift - Bank-projekt -- Automatiserat Datakvalitetsflöde 
-
-Detta projektuppgift heter "Bank Project" och handlar om att vi ska göra transaktioner och rollbacks vid fel, validera, analysera och importera data i en databas, logga tester och kvalitetssäkra på ett automatiserat sätt.
-
-## 📖 Projektbeskrivning
+#### 📖 Projektbeskrivning
 Detta projekt implementerar ett **automatiserat workflow** för att:
 - Ta emot dagliga transaktionsfiler (CSV).
 - Validera och analysera datan (saknade värden, IBAN, felaktiga datum etc.).
@@ -38,5 +20,5 @@ Verktyg för projektet:
 - Prefect > Workflow-automatisering
 - Git > Versionshantering
 
-
-Projektet är versionerat i GitHub och följer en tydlig mappstruktur för enkel vidareutveckling.
+Utelämnade uppgifter:
+- SCRUM
