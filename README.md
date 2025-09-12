@@ -1,7 +1,7 @@
 # Bank Project - ETL och Analys - Automatiserat datakvalitetsflöde
-# Individuellt arbete av SauFey
+### Individuellt arbete av SauFey
 
-## 📖 Projektbeskrivning
+#### 📖 Projektbeskrivning
 Detta projekt implementerar ett **automatiserat workflow** för att:
 - Ta emot dagliga transaktionsfiler (CSV).
 - Validera och analysera datan (saknade värden, IBAN, felaktiga datum etc.).
